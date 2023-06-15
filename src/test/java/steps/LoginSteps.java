@@ -13,8 +13,8 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.open;
 
 public class LoginSteps extends BaseSteps {
-    @Given("^I am on the page Login$")
-    public void iAmOnThePageLogin() {
+    @Given("^I open the page Login$")
+    public void iOpenPageLogin() {
         System.setProperty("chromeoptions.args", "--remote-allow-origins=*");
         open(BASE_URL);
     }
@@ -38,5 +38,10 @@ public class LoginSteps extends BaseSteps {
     public void errorWithTextIsDisplayed(String expectedText) {
         loginPage.errorMessage.shouldBe(visible);
         loginPage.errorMessage.shouldHave(text(expectedText));
+    }
+
+    @Then("^I am on the page Login$")
+    public void iAmOnThePageLogin() {
+        loginPage.loginButton.shouldBe(visible);
     }
 }
