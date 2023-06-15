@@ -7,7 +7,7 @@ import cucumber.api.java.en.When;
 import static com.codeborne.selenide.Condition.*;
 
 public class SideBarSteps extends BaseSteps{
-    @And("^click on burger menu$")
+    @And("^(?:I )*click on burger menu$")
     public void clickOnBurgerMenu() {
         sideBar.burgerMenu.shouldBe(visible).click();
     }

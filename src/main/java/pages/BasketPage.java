@@ -24,5 +24,4 @@ public class BasketPage {
 
     public SelenideElement thankYouForYourOrderText = $(byTagName("h2"));
 
-    public SelenideElement urlIsCorrect = $((""));
 }
