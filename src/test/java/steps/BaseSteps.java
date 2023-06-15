@@ -1,5 +1,6 @@
 package steps;
 
+import pages.BasketPage;
 import pages.InventoryPage;
 import pages.LoginPage;
 import pages.SideBar;
@@ -11,5 +12,7 @@ public class BaseSteps {
     InventoryPage inventoryPage = new InventoryPage();
 
     SideBar sideBar = new SideBar();
+
+    BasketPage basketPage = new BasketPage();
 
 }
