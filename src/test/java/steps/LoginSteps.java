@@ -21,7 +21,7 @@ public class LoginSteps extends BaseSteps {
 
     @When("^I input \"([^\"]*)\" to username field$")
     public void iInputToUsernameField(String usernameValue) {
-        loginPage.usernameField.setValue(usernameValue);
+        loginPage.usernameField.sendKeys(usernameValue);
     }
 
     @And("^input \"([^\"]*)\" to password field$")
